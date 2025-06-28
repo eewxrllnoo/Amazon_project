@@ -13,7 +13,7 @@ A responsive Amazon.com clone built with HTML, CSS, and JavaScript that mimics t
 
 ## Live Demo 🌐
 
-[View Live Demo](#url)
+[View Live Demo](https://amazon-clone-erwinllano.netlify.app/)
 
 ## Installation 🛠️
 
