@@ -1,4 +1,5 @@
 export let cart = JSON.parse(localStorage.getItem("cart"));
+// test
 if (!cart) {
   cart = [
     {
