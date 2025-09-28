@@ -1,5 +1,10 @@
 // export let cart = JSON.parse(localStorage.getItem("cart"));
-export let cart;
+// export let cart;
+
+const cart = {
+  cartItems: "undefined",
+};
+
 loadfromStorage();
 
 export function loadfromStorage() {
