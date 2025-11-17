@@ -93,7 +93,7 @@ object3.method();
 
 export let products = [];
 
-export function loadProducts(renderProductsGrid) {
+export function loadProducts(fun) {
   // Callback
 
   const xhr = new XMLHttpRequest();
@@ -108,7 +108,7 @@ export function loadProducts(renderProductsGrid) {
 
     console.log("load products...");
 
-    renderProductsGrid();
+    fun();
   });
 
   xhr.open("GET", "https://supersimplebackend.dev/products");
