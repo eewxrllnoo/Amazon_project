@@ -18,3 +18,7 @@ loadProducts(() => {
   renderOrderSummary();
   renderPaymentSummary();
 });
+
+// Test 
+
+console.log('test');
