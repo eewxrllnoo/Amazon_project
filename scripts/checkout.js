@@ -5,7 +5,7 @@ import { loadCart } from "../data/cart.js";
 // import "../data/cart-class.js";
 // import "../data/backend-practice.js";
 
-/*
+ 
 new Promise((resolve) => {
   console.log("Start Promise");
   loadProducts(() => {
@@ -13,14 +13,21 @@ new Promise((resolve) => {
     resolve();
   });
 }).then(() => {
-  renderOrderSummary();
-  renderPaymentSummary();
-});
-*/ 
+  return new Promise((resolve) => {
+   loadCart(() => {
+    resolve();
+   });
+  });
+ }).then(() => {
+    renderOrderSummary();
+    renderPaymentSummary();
+ });
 
+/* Using Callbacks
 loadProducts(() => {
-  loadCart(() => {})
-  renderOrderSummary();
-  renderPaymentSummary();
+  loadCart(() => {
+    renderOrderSummary();
+    renderPaymentSummary();
+  });
 });
-
+*/
