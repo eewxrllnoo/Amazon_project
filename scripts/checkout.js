@@ -12,18 +12,22 @@ new Promise((resolve) => {
     console.log("finished loading");
     resolve();
   });
+
 }).then(() => {
   return new Promise((resolve) => {
    loadCart(() => {
     resolve();
    });
   });
+  
  }).then(() => {
     renderOrderSummary();
     renderPaymentSummary();
  });
+ 
 
-/* Using Callbacks
+/*
+// Using Callbacks
 loadProducts(() => {
   loadCart(() => {
     renderOrderSummary();
