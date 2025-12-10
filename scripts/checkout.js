@@ -5,15 +5,37 @@ import { loadCart } from "../data/cart.js";
 // import "../data/cart-class.js";
 // import "../data/backend-practice.js";
 
- 
+
+Promise.all([
+  new Promise((resolve) => {
+  console.log("Start Promise");
+  loadProducts(() => {
+    resolve('value1');
+  });
+}),
+new Promise((resolve) => {
+   loadCart(() => {
+    resolve();
+   });
+  })
+
+]).then((values) => {
+  console.log(values);
+  renderOrderSummary();
+  renderPaymentSummary();
+});
+
+/*
+// Using Promises - Help keep our code flat
 new Promise((resolve) => {
   console.log("Start Promise");
   loadProducts(() => {
-    console.log("finished loading");
-    resolve();
+    // console.log("finished loading");
+    resolve('value1');
   });
 
-}).then(() => {
+}).then((value) => {
+  console.log(value)
   return new Promise((resolve) => {
    loadCart(() => {
     resolve();
@@ -24,7 +46,7 @@ new Promise((resolve) => {
     renderOrderSummary();
     renderPaymentSummary();
  });
- 
+ */
 
 /*
 // Using Callbacks
