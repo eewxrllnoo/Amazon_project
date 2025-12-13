@@ -6,6 +6,10 @@ import { loadCart } from "../data/cart.js";
 // import "../data/backend-practice.js";
 
 
+function loadPage() {
+  console.log("Page Loaded"); 
+}
+
 Promise.all([
  loadProductsFetch(),
 new Promise((resolve) => {
