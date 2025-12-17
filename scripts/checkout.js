@@ -7,17 +7,22 @@ import { loadCart } from "../data/cart.js";
 
 
 async function loadPage() {
-  console.log("Page Loaded"); 
+   
 
   await loadProductsFetch();
+  const value = await new Promise((resolve) => {
+   loadCart(() => {
+    resolve('value5');
+   });
+  });
 
-  return 'value2';
-}
-loadPage().then((value) => {
-  console.log("Next step");
-  console.log(value);
   
-});
+  renderOrderSummary();
+  renderPaymentSummary();
+
+  
+}
+loadPage();
 
 /*
 // Using Fetch and  Promises
