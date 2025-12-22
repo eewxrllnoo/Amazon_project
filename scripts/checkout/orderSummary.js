@@ -41,7 +41,7 @@ export function renderOrderSummary() {
                     ${matchingProduct.name}
                   </div>
                   <div class="product-price">${matchingProduct.getPrice()}
-                  )}</div>
+                   </div>
                   <div class="product-quantity">
                     <span> Quantity: <span class="quantity-label">${
                       cartItem.quantity
