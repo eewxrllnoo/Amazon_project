@@ -109,7 +109,7 @@ export function loadProductsFetch() {
     console.log('Unexpected error. Please try again later.');
   });
 
-  return promise;
+  return promise;                            
 }
 
  
